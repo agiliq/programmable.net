@@ -49,13 +49,27 @@
 </head>
 <body>
     <h1>The internet is programmable. So don't wait, learnt programming and program the internet to your heart's delight.</h1>
-    <div class="outputDiv">
-        <ul>
-            <li><a href="python.html">python</a></li>
-            <li><a href="java.html">java</a></li>
-            <li><a href="ruby.html">ruby</a></li>
-        </ul>
+    <div class="outputDiv"></div>
+<script>
+    $.ajax({
+      url: "ruby.md",
+      context: document.body,
+      success: function(mdText){
+        //where text will be the text returned by the ajax call
+        var converter = new Showdown.converter();
+        var htmlText = converter.makeHtml(mdText);
+        $(".outputDiv").append(htmlText); //append this to a div with class outputDiv
 
-    </div>
+        $(".outputDiv li a").each(function(){
+            var href = $(this).attr("href")
+            $(this).after(" <span>("+ href+ ")</span>");
+        });
+
+      }
+    });
+
+</script>
+
+
 </body>
 </html>
