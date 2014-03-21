@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>
+        Learn Programming - Program the Net
+    </title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+    <style type="text/css">
+    body{
+        background-color: #44443c;
+        color: #a1a19d;
+        font-size: 1.2em;
+        margin-left: 25%;
+        max-width: 36em;
+    }
+    a{
+        color: #629202;
+
+    }
+    li span{
+        font-size: 0.8em;
+    }
+    li a{
+        font-size: 1.0em;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    li{
+        list-style: none;
+    }
+    li span{
+        display: inline;
+        margin-left: 0.6em;
+    }
+    ul{
+        padding-left: 0px;
+    }
+    h1{
+        font-size: 1.5em;
+        color: #629202;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>The internet is programmable. So don't wait, learnt programming and program the internet to your heart's delight.</h1>
+    <div class="outputDiv"></div>
+<script>
+    $.ajax({
+      url: "java.md",
+      context: document.body,
+      success: function(mdText){
+        //where text will be the text returned by the ajax call
+        var converter = new Showdown.converter();
+        var htmlText = converter.makeHtml(mdText);
+        $(".outputDiv").append(htmlText); //append this to a div with class outputDiv
+
+        $(".outputDiv li a").each(function(){
+            var href = $(this).attr("href")
+            $(this).after(" <span>("+ href+ ")</span>");
+        });
+
+      }
+    });
+
+</script>
+
+
+</body>
+</html>
