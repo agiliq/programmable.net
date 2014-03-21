@@ -425,4 +425,4 @@
 * [Solving Every Sudoku Puzzle](http://norvig.com/sudoku.html)
 * [IHeartPy!](http://www.iheartpy.com/)
 
-*[Thanks](https://github.com/kirang89/pycrumbs)
+**[Thanks](https://github.com/kirang89/pycrumbs)**
