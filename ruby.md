@@ -127,6 +127,8 @@ documentation sources. There are also plenty of [books about Ruby][35].
 If you have questions about Ruby the [mailing
 list](/en/community/mailing-lists/) is a great place to start.
 
+**[thanks](https://www.ruby-lang.org/en/documentation/)**
+
 
 
 [1]: http://tryruby.org/
