@@ -1,0 +1,5 @@
+* [Learning Perl](http://learn.perl.org/)
+* [Beginning Perl](http://www.perl.org/books/beginning-perl/)
+* [Modern Perl](http://www.onyxneon.com/books/modern_perl/index.html)
+* [Impatient Perl](http://www.perl.org/books/impatient-perl/)
+* [Extreme Perl](http://www.extremeperl.org/)
